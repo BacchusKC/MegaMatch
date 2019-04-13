@@ -1,0 +1,12 @@
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+img:hover {
+    cursor: pointer;
+}
+.iconHolder {
+    float: left;
+    margin: 10px;
+}
