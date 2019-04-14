@@ -1,5 +1,5 @@
 import React from "react";
-import './icon.css'
+import './Icon.css'
 
 function Icon(props) {
 
@@ -9,9 +9,9 @@ function Icon(props) {
                 src={props.src}
                 name={props.name}
                 onClick={() => props.handleClick(props.name)}
+                className="bosses"
             />
         </div>
-
     )
 };
 

@@ -17,11 +17,11 @@
     },
     {
         "name": "Gemini Man",
-        "src": "./assets/images/geminiman.jpg"
+        "src": "./assets/images/geminiman.png"
     },
     {
         "name": "Hard Man",
-        "src": "./assets/images/hardman.jpg"
+        "src": "./assets/images/hardman.png"
     },
     {
         "name": "Heat Man",
@@ -29,7 +29,7 @@
     },
     {
         "name": "Magnet Man",
-        "src": "./assets/images/magnetman.jpg"
+        "src": "./assets/images/magnetman.png"
     },
     {
         "name": "Metal Man",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Needle Man",
-        "src": "./assets/images/needleman.jpg"
+        "src": "./assets/images/needleman.png"
     },
     {
         "name": "Quick Man",
@@ -45,19 +45,19 @@
     },
     {
         "name": "Shadow Man",
-        "src": "./assets/images/shadowman.jpg"
+        "src": "./assets/images/shadowman.png"
     },
     {
         "name": "Snake Man",
-        "src": "./assets/images/snakeman.jpg"
+        "src": "./assets/images/snakeman.png"
     },
     {
         "name": "Spark Man",
-        "src": "./assets/images/sparkman.jpg"
+        "src": "./assets/images/sparkman.png"
     },
     {
         "name": "Top Man",
-        "src": "./assets/images/topman.jpg"
+        "src": "./assets/images/topman.png"
     },
     {
         "name": "Wood Man",

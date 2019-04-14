@@ -3,52 +3,34 @@ import './App.css';
 import icons from './icons.json';
 import Icon from './components/Icon';
 
+const gameStatus = ["You Lost!!", "Pick Your Enemy to Begin", "You Picked Correct!"];
+const menuType = ["./assets/images/start.png", "./assets/images/correct.png", "./assets/images/incorrect.png"];
+
 class App extends Component {
   state = {
-    unused: [],
     used: [],
     score: 0,
     high: 0,
-    correct: false
-  }
-
-  componentDidMount() {
-    this.setState({
-      unused: icons
-    });
+    lost: false,
+    status: gameStatus[1],
+    menu: menuType[0]
   };
 
   handleClick = (name) => {
-    for (let i = 0; i < this.state.unused.length; i++) {
-      if (name === this.state.unused[i].name) {
-        this.setState({
-          unused: this.state.unused.filter(unused => name !== unused.name)
-        });
-        
-        // console.log(this.state.unused.length)
-        this.setState({
-          correct: true,
-          score: 17 - this.state.unused.length
-        });
-        this.setState(prevState => ({
-          used: [...prevState.used, name]
-        }))
-        if (this.state.score >= this.state.high) {
-          this.setState({
-            high: this.state.score + 1
-          });
-        };
+    if (this.state.used.indexOf(name) !== -1) {
+      this.gameOver();
+    } else {
+      let tempUsed = this.state.used;
+      tempUsed.push(name);
+      this.setState({ used: tempUsed, score: this.state.score + 1, lost: false, status: gameStatus[2], menu: menuType[1] })
+      if (this.state.high <= this.state.score) {
+        this.setState({ high: this.state.score + 1 })
       };
-      for (let i = 0; i < this.state.used.length; i++) {
-        if (name === this.state.used[i]) {
-          // console.log("Hi")
-        }
-      }
     };
   };
 
-  random () {
-    let tempArray = [ ...icons ];
+  random() {
+    let tempArray = [...icons];
     for (let i = tempArray.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       let temp = tempArray[i];
@@ -56,28 +38,51 @@ class App extends Component {
       tempArray[j] = temp;
     };
     return tempArray;
-  }
+  };
+
+  gameOver() {
+    this.setState({ used: [], score: 0, lost: true, status: gameStatus[0], menu: menuType[2] });
+  };
 
   render() {
-    const randomArray = this.random()
-    // console.log(this.state.unused)
-    // console.log(this.state.correct, this.state.score, this.state.high)
+    const randomArray = this.random();
+    let imgShake = ["row"];
+    console.log(this.state.score, this.state.high);
+    if (this.state.lost) {
+      imgShake = "shake row";
+    } else {
+      imgShake = "row";
+    };
     return (
-      <div className="row">
-        {
-          randomArray.map((icon) => {
-            return (
-              <Icon
-                key={icon.name}
-                name={icon.name}
-                src={icon.src}
-                handleClick={this.handleClick}
-              />
-            )
-          })
-        }
+      <div>
+        <div className="sideBar">
+          <img alt="Mega Match" id="mega" src="./assets/images/MEGA.png" />
+          <img alt="menu" id="menu" src={this.state.menu} />
+          <div id="scorebox">
+            <h1 id="score">High Score: &nbsp;&nbsp;&nbsp;{this.state.high}</h1>
+            <h1 id="score">Current Score: {this.state.score}</h1>
+          </div>
+          <div id="bottom">
+            <h3>To Play: Click any Robot Master, but don't click the same one twice!</h3>
+            <h4> Attn: Because of the style of play in this game, playing on mobile isn't feasible, so I did not make it mobile responsive. Be Aware!</h4>
+          </div>
+        </div>
+        <div className={imgShake}>
+          {
+            randomArray.map((icon) => {
+              return (
+                <Icon
+                  key={icon.name}
+                  name={icon.name}
+                  src={icon.src}
+                  handleClick={this.handleClick}
+                />
+              );
+            })
+          };
+        </div>
       </div>
-    )
+    );
   };
 };
 
