@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/MegaMatch/static/css/main.eb519bf8.chunk.css"
   },
   {
-    "revision": "df2d34c56eaa5eea4af5f7a07f02a48e",
+    "revision": "75bc25029d4496cbfabbfbfc3d7ab819",
     "url": "/MegaMatch/index.html"
   }
 ];
