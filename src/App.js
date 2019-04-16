@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.css?v=2';
 import icons from './icons.json';
 import Icon from './components/Icon';
 
