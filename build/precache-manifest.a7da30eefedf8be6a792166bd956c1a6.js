@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/MegaMatch/static/js/runtime~main.ffb54604.js"
   },
   {
-    "revision": "a9231c150badad94e4bd",
-    "url": "/MegaMatch/static/js/main.d3a40b91.chunk.js"
+    "revision": "b50538faab54165bece8",
+    "url": "/MegaMatch/static/js/main.ab2a66c1.chunk.js"
   },
   {
     "revision": "c65f0670c7d7a243f52e",
     "url": "/MegaMatch/static/js/2.f75e8bbc.chunk.js"
   },
   {
-    "revision": "a9231c150badad94e4bd",
-    "url": "/MegaMatch/static/css/main.e17fa2e5.chunk.css"
+    "revision": "b50538faab54165bece8",
+    "url": "/MegaMatch/static/css/main.59b3fc4c.chunk.css"
   },
   {
-    "revision": "9a7d0a36eccffc2a7f2b2cc5a8bf3ec8",
+    "revision": "484147e8b63fda20e9a7a221d9f9e550",
     "url": "/MegaMatch/index.html"
   }
 ];
