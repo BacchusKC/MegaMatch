@@ -46,15 +46,14 @@ class App extends Component {
 
   render() {
     const randomArray = this.random();
-    let imgShake = ["row"];
-    console.log(this.state.score, this.state.high);
+    let imgShake = ["row game"];
     if (this.state.lost) {
-      imgShake = "shake row";
+      imgShake = "shake row game";
     } else {
-      imgShake = "row";
+      imgShake = "row game";
     };
     return (
-      <div>
+      <div className="row">
         <div className="sideBar">
           <img alt="Mega Match" id="mega" src="./assets/images/MEGA.png" />
           <img alt="menu" id="menu" src={this.state.menu} />
