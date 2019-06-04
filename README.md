@@ -6,3 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Due to the style in which this game was designed to play, it was not made mobile responsive, and so I can only recommend playing it on a full browser. Thanks!
 
+![Mega](/public/assets/images/megaMatch.jpg)
