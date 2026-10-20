@@ -1,68 +1,177 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body {
-  background-image: url("./components/images/background.jpg");
-  background-color: rgb(46, 91, 226);
-  background-size: cover;
-  position: relative;
+  background: rgb(46, 91, 226) url("./components/images/background.jpg") center bottom / cover no-repeat fixed;
+  min-height: 100vh;
 }
-.game {
-  margin: 60px auto;
-  text-align: center;
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 30px;
+  min-height: 100vh;
+}
+.panel {
   background-color: rgb(46, 91, 226);
-  height: 100%;
-  width: 100%;
-  max-height: 690px;
-  max-width: 680px;
-  border-radius: 10px;
   border: 4px solid silver;
-  float: left;
+  border-radius: 10px;
 }
 .sideBar {
   color: white;
-  height: 100%;
-  width: 100%;
-  max-height: 650px;
-  max-width: 360px;
-  border-radius: 10px;
-  border: 4px solid silver;
-  background-color: rgb(46, 91, 226);
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 4px 4px darkslategray;
   text-align: center;
   padding: 20px;
-  margin: 60px 30px;
-  float: left;
+  width: 360px;
+  flex: none;
 }
-.row {
-  text-align: center;
-  /* margin: auto; */
-  height: 100vh;
-}
-#mega {
+.logo {
+  display: block;
   width: 85%;
+  height: auto;
+  margin: 0 auto;
 }
-#menu {
-  width: 60%;
+.modeToggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 15px;
 }
-#score {
-  font-family: 'Press Start 2P', cursive;
-  font-weight: lighter;
-  text-shadow: 5px 5px darkslategray;
-  font-size: 21px;
-  line-height: 30px;
+.modeToggle button {
+  font-family: inherit;
+  font-size: 12px;
+  color: white;
+  text-shadow: 2px 2px darkslategray;
+  background: transparent;
+  border: 3px solid silver;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
-#scorebox {
-  padding-top: 30px;
+.modeToggle button[aria-pressed="true"] {
+  background: white;
+  color: rgb(46, 91, 226);
+  text-shadow: none;
+  cursor: default;
+}
+.modeToggle button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+.menu {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 15px auto 0;
+}
+.scorebox {
+  margin: 30px 0 0;
+  font-size: 18px;
+  line-height: 30px;
   text-align: left;
 }
-#bottom {
-  font-family: 'Press Start 2P', cursive;
-  font-weight: lighter;
-  text-shadow: 5px 5px darkslategray;
+.scorebox div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.scorebox dt,
+.scorebox dd {
+  margin: 0;
+}
+.scorebox .lives {
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+}
+.lives dd {
+  display: flex;
+  gap: 4px;
+}
+.life {
+  display: block;
+  width: 34px;
+  height: auto;
+  transition: opacity 0.3s;
+}
+.life.spent {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+.instructions {
+  margin: 30px 0 0;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
-  padding-top: 15px;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 680px;
+  max-width: 100%;
+}
 
+/* Tablets and small laptops: stack the score panel above the board */
+@media (max-width: 1120px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 16px;
+  }
+  .sideBar {
+    width: 680px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo  scores"
+      "mode  scores"
+      "menu  scores"
+      "help  help";
+    align-items: center;
+    column-gap: 20px;
+  }
+  .logo { grid-area: logo; width: 100%; }
+  .modeToggle { grid-area: mode; }
+  .menu { grid-area: menu; width: 75%; }
+  .scorebox { grid-area: scores; margin: 0; font-size: 14px; }
+  .instructions { grid-area: help; margin-top: 20px; text-align: center; }
+}
+
+/* Phones: keep the panel compact so the board stays on screen */
+@media (max-width: 600px) {
+  .layout {
+    gap: 12px;
+    padding: 12px;
+  }
+  .sideBar {
+    padding: 12px;
+    text-shadow: 2px 2px darkslategray;
+    column-gap: 12px;
+    grid-template-areas:
+      "logo   menu"
+      "mode   menu"
+      "scores scores"
+      "help   help";
+  }
+  .modeToggle { gap: 6px; margin-top: 8px; }
+  .modeToggle button { font-size: 8px; padding: 6px 8px; border-width: 2px; }
+  .menu { width: 100%; margin-top: 0; }
+  .scorebox { font-size: 10px; line-height: 20px; margin-top: 12px; }
+  .life { width: 22px; }
+  .instructions { font-size: 8px; line-height: 14px; margin-top: 12px; }
+  .game {
+    gap: 10px;
+    padding: 10px;
+    /* fit the whole board on short screens too */
+    width: min(100%, calc(100vh - 220px));
+    min-width: 260px;
+  }
 }

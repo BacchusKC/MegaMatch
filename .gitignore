@@ -57,5 +57,14 @@ typings/
 # dotenv environment variables file
 .env
 
+# Create React App build output (deployed via gh-pages)
+/build
+
 # next.js build output
 .next
+
+# macOS
+.DS_Store
+
+# JetBrains IDE settings
+.idea/

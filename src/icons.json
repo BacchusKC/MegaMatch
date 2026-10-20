@@ -1,66 +1,66 @@
 [
     {
         "name": "Air Man",
-        "src": "./assets/images/airman.jpg"
+        "src": "assets/images/airman.jpg"
     },
     {
         "name": "Bubble Man",
-        "src": "./assets/images/bubbleman.jpg"
+        "src": "assets/images/bubbleman.jpg"
     },
     {
         "name": "Crash Man",
-        "src": "./assets/images/crashman.jpg"
+        "src": "assets/images/crashman.jpg"
     },
     {
         "name": "Flash Man",
-        "src": "./assets/images/flashman.jpg"
+        "src": "assets/images/flashman.jpg"
     },
     {
         "name": "Gemini Man",
-        "src": "./assets/images/geminiman.png"
+        "src": "assets/images/geminiman.png"
     },
     {
         "name": "Hard Man",
-        "src": "./assets/images/hardman.png"
+        "src": "assets/images/hardman.png"
     },
     {
         "name": "Heat Man",
-        "src": "./assets/images/heatman.jpg"
+        "src": "assets/images/heatman.jpg"
     },
     {
         "name": "Magnet Man",
-        "src": "./assets/images/magnetman.png"
+        "src": "assets/images/magnetman.png"
     },
     {
         "name": "Metal Man",
-        "src": "./assets/images/metalman.jpg"
+        "src": "assets/images/metalman.jpg"
     },
     {
         "name": "Needle Man",
-        "src": "./assets/images/needleman.png"
+        "src": "assets/images/needleman.png"
     },
     {
         "name": "Quick Man",
-        "src": "./assets/images/quickman.jpg"
+        "src": "assets/images/quickman.jpg"
     },
     {
         "name": "Shadow Man",
-        "src": "./assets/images/shadowman.png"
+        "src": "assets/images/shadowman.png"
     },
     {
         "name": "Snake Man",
-        "src": "./assets/images/snakeman.png"
+        "src": "assets/images/snakeman.png"
     },
     {
         "name": "Spark Man",
-        "src": "./assets/images/sparkman.png"
+        "src": "assets/images/sparkman.png"
     },
     {
         "name": "Top Man",
-        "src": "./assets/images/topman.png"
+        "src": "assets/images/topman.png"
     },
     {
         "name": "Wood Man",
-        "src": "./assets/images/woodman.jpg"
+        "src": "assets/images/woodman.jpg"
     }
 ]

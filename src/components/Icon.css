@@ -1,7 +1,30 @@
-img {
-    width: 150px;
-    height: 150px;
+.iconHolder {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
     border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+.iconHolder:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+.bosses {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    transition: transform 0.1s;
+}
+@media (hover: hover) {
+    .iconHolder:hover .bosses {
+        transform: scale(1.1);
+    }
+}
+.iconHolder:active .bosses {
+    transform: scale(0.95);
 }
 .shake {
     animation: shake 0.5s;
@@ -18,12 +41,4 @@ img {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-.bosses:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-.iconHolder {
-    float: left;
-    margin: 10px;
 }
