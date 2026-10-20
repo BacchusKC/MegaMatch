@@ -1,14 +1,14 @@
 {
-  "main.css": "/MegaMatch/static/css/main.59b3fc4c.chunk.css",
-  "main.js": "/MegaMatch/static/js/main.ab2a66c1.chunk.js",
-  "main.js.map": "/MegaMatch/static/js/main.ab2a66c1.chunk.js.map",
-  "runtime~main.js": "/MegaMatch/static/js/runtime~main.ffb54604.js",
-  "runtime~main.js.map": "/MegaMatch/static/js/runtime~main.ffb54604.js.map",
-  "static/js/2.f75e8bbc.chunk.js": "/MegaMatch/static/js/2.f75e8bbc.chunk.js",
-  "static/js/2.f75e8bbc.chunk.js.map": "/MegaMatch/static/js/2.f75e8bbc.chunk.js.map",
-  "index.html": "/MegaMatch/index.html",
-  "precache-manifest.81d8f62773bc2580265cd11b1abfb0fe.js": "/MegaMatch/precache-manifest.81d8f62773bc2580265cd11b1abfb0fe.js",
-  "service-worker.js": "/MegaMatch/service-worker.js",
-  "static/css/main.59b3fc4c.chunk.css.map": "/MegaMatch/static/css/main.59b3fc4c.chunk.css.map",
-  "static/media/App.css?v=2": "/MegaMatch/static/media/background.4b36acce.jpg"
+  "files": {
+    "main.css": "/MegaMatch/static/css/main.a7544afe.css",
+    "main.js": "/MegaMatch/static/js/main.4587d8a4.js",
+    "static/media/background.jpg": "/MegaMatch/static/media/background.e93260755a03269b3a44.jpg",
+    "index.html": "/MegaMatch/index.html",
+    "main.a7544afe.css.map": "/MegaMatch/static/css/main.a7544afe.css.map",
+    "main.4587d8a4.js.map": "/MegaMatch/static/js/main.4587d8a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7544afe.css",
+    "static/js/main.4587d8a4.js"
+  ]
 }
